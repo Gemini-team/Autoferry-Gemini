@@ -1,0 +1,32 @@
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.vehiclecontroller";
+option java_outer_classname = "VehicleController";
+option objc_class_prefix = "HLW";
+
+package vehiclecontroller;
+
+service VehicleController {
+    rpc DriveForward(DriveRequest) returns (DriveResponse) {}
+    rpc DriveBackward(DriveRequest) returns (DriveResponse) {}
+    rpc SteerRight(SteerRequest) returns (SteerResponse) {}
+    rpc SteerLeft(SteerRequest) returns (SteerResponse) {}
+}
+
+message DriveRequest {
+    float value = 1;
+}
+
+message DriveResponse {
+    bool success = 1;
+}
+
+message SteerRequest {
+    float value = 1;
+}
+
+message SteerResponse {
+    bool success = 1;
+}
