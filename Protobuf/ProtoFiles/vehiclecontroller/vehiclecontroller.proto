@@ -9,24 +9,14 @@ option objc_class_prefix = "HLW";
 package vehiclecontroller;
 
 service VehicleController {
-    rpc DriveForward(DriveRequest) returns (DriveResponse) {}
-    rpc DriveBackward(DriveRequest) returns (DriveResponse) {}
-    rpc SteerRight(SteerRequest) returns (SteerResponse) {}
-    rpc SteerLeft(SteerRequest) returns (SteerResponse) {}
+    rpc Drive(DriveRequest) returns (DriveResponse) {}
 }
 
 message DriveRequest {
-    float value = 1;
+    float torque = 1;
+    float angle = 2;
 }
 
 message DriveResponse {
-    bool success = 1;
-}
-
-message SteerRequest {
-    float value = 1;
-}
-
-message SteerResponse {
     bool success = 1;
 }
