@@ -10,6 +10,8 @@ package vehiclecontroller;
 
 service VehicleController {
     rpc Drive(DriveRequest) returns (DriveResponse) {}
+    rpc DriveForward(DriveForwardRequest) returns (DriveResponse) {}
+    rpc DriveBackward(DriveBackwardRequest) returns (DriveResponse) {}
 }
 
 message DriveRequest {
@@ -19,4 +21,12 @@ message DriveRequest {
 
 message DriveResponse {
     bool success = 1;
+}
+
+message DriveForwardRequest {
+    float value = 1;
+}
+
+message DriveBackwardRequest {
+    float value = 1;
 }

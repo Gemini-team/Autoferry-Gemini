@@ -131,6 +131,49 @@ namespace Assets.Networking.Services
 
         }
 
+        public override async Task<DriveResponse> DriveForward(DriveForwardRequest request, ServerCallContext context)
+        {
+
+            ManualResetEvent signalEvent = new ManualResetEvent(false);
+            ThreadManager.ExecuteOnMainThread(() =>
+            {
+                _wheelDrive.torque = _wheelDrive.maxTorque;
+
+                // Need to set signal event such that it wont block forever.
+                signalEvent.Set();
+            });
+
+            // Wait for the event to be triggered from the action, signaling that the action is finished
+            signalEvent.WaitOne();
+            signalEvent.Close();
+
+            return await Task.FromResult(new DriveResponse
+            {
+                Success = true
+            });
+        }
+
+        public override async Task<DriveResponse> DriveBackward(DriveBackwardRequest request, ServerCallContext context)
+        {
+
+            ManualResetEvent signalEvent = new ManualResetEvent(false);
+            ThreadManager.ExecuteOnMainThread(() =>
+            {
+                _wheelDrive.torque = -1 * _wheelDrive.maxTorque;
+
+                // Need to set signal event such that it wont block forever.
+                signalEvent.Set();
+            });
+
+            // Wait for the event to be triggered from the action, signaling that the action is finished
+            signalEvent.WaitOne();
+            signalEvent.Close();
+
+            return await Task.FromResult(new DriveResponse
+            {
+                Success = true
+            });
+        }
     }
 
 }

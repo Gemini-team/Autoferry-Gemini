@@ -14,12 +14,28 @@ namespace Vehiclecontroller {
 
     static readonly grpc::Marshaller<global::Vehiclecontroller.DriveRequest> __Marshaller_vehiclecontroller_DriveRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Vehiclecontroller.DriveRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Vehiclecontroller.DriveResponse> __Marshaller_vehiclecontroller_DriveResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Vehiclecontroller.DriveResponse.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Vehiclecontroller.DriveForwardRequest> __Marshaller_vehiclecontroller_DriveForwardRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Vehiclecontroller.DriveForwardRequest.Parser.ParseFrom);
+    static readonly grpc::Marshaller<global::Vehiclecontroller.DriveBackwardRequest> __Marshaller_vehiclecontroller_DriveBackwardRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Vehiclecontroller.DriveBackwardRequest.Parser.ParseFrom);
 
     static readonly grpc::Method<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse> __Method_Drive = new grpc::Method<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Drive",
         __Marshaller_vehiclecontroller_DriveRequest,
+        __Marshaller_vehiclecontroller_DriveResponse);
+
+    static readonly grpc::Method<global::Vehiclecontroller.DriveForwardRequest, global::Vehiclecontroller.DriveResponse> __Method_DriveForward = new grpc::Method<global::Vehiclecontroller.DriveForwardRequest, global::Vehiclecontroller.DriveResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DriveForward",
+        __Marshaller_vehiclecontroller_DriveForwardRequest,
+        __Marshaller_vehiclecontroller_DriveResponse);
+
+    static readonly grpc::Method<global::Vehiclecontroller.DriveBackwardRequest, global::Vehiclecontroller.DriveResponse> __Method_DriveBackward = new grpc::Method<global::Vehiclecontroller.DriveBackwardRequest, global::Vehiclecontroller.DriveResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DriveBackward",
+        __Marshaller_vehiclecontroller_DriveBackwardRequest,
         __Marshaller_vehiclecontroller_DriveResponse);
 
     /// <summary>Service descriptor</summary>
@@ -33,6 +49,16 @@ namespace Vehiclecontroller {
     public abstract partial class VehicleControllerBase
     {
       public virtual global::System.Threading.Tasks.Task<global::Vehiclecontroller.DriveResponse> Drive(global::Vehiclecontroller.DriveRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Vehiclecontroller.DriveResponse> DriveForward(global::Vehiclecontroller.DriveForwardRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Vehiclecontroller.DriveResponse> DriveBackward(global::Vehiclecontroller.DriveBackwardRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -78,6 +104,38 @@ namespace Vehiclecontroller {
       {
         return CallInvoker.AsyncUnaryCall(__Method_Drive, null, options, request);
       }
+      public virtual global::Vehiclecontroller.DriveResponse DriveForward(global::Vehiclecontroller.DriveForwardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DriveForward(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Vehiclecontroller.DriveResponse DriveForward(global::Vehiclecontroller.DriveForwardRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DriveForward, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Vehiclecontroller.DriveResponse> DriveForwardAsync(global::Vehiclecontroller.DriveForwardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DriveForwardAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Vehiclecontroller.DriveResponse> DriveForwardAsync(global::Vehiclecontroller.DriveForwardRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DriveForward, null, options, request);
+      }
+      public virtual global::Vehiclecontroller.DriveResponse DriveBackward(global::Vehiclecontroller.DriveBackwardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DriveBackward(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Vehiclecontroller.DriveResponse DriveBackward(global::Vehiclecontroller.DriveBackwardRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DriveBackward, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Vehiclecontroller.DriveResponse> DriveBackwardAsync(global::Vehiclecontroller.DriveBackwardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DriveBackwardAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Vehiclecontroller.DriveResponse> DriveBackwardAsync(global::Vehiclecontroller.DriveBackwardRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DriveBackward, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override VehicleControllerClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -90,7 +148,9 @@ namespace Vehiclecontroller {
     public static grpc::ServerServiceDefinition BindService(VehicleControllerBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_Drive, serviceImpl.Drive).Build();
+          .AddMethod(__Method_Drive, serviceImpl.Drive)
+          .AddMethod(__Method_DriveForward, serviceImpl.DriveForward)
+          .AddMethod(__Method_DriveBackward, serviceImpl.DriveBackward).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -100,6 +160,8 @@ namespace Vehiclecontroller {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, VehicleControllerBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_Drive, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse>(serviceImpl.Drive));
+      serviceBinder.AddMethod(__Method_DriveForward, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Vehiclecontroller.DriveForwardRequest, global::Vehiclecontroller.DriveResponse>(serviceImpl.DriveForward));
+      serviceBinder.AddMethod(__Method_DriveBackward, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Vehiclecontroller.DriveBackwardRequest, global::Vehiclecontroller.DriveResponse>(serviceImpl.DriveBackward));
     }
 
   }

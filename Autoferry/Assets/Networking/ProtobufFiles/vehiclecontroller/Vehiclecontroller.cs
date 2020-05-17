@@ -27,15 +27,23 @@ namespace Vehiclecontroller {
             "Cil2ZWhpY2xlY29udHJvbGxlci92ZWhpY2xlY29udHJvbGxlci5wcm90bxIR",
             "dmVoaWNsZWNvbnRyb2xsZXIiLQoMRHJpdmVSZXF1ZXN0Eg4KBnRvcnF1ZRgB",
             "IAEoAhINCgVhbmdsZRgCIAEoAiIgCg1Ecml2ZVJlc3BvbnNlEg8KB3N1Y2Nl",
-            "c3MYASABKAgyYQoRVmVoaWNsZUNvbnRyb2xsZXISTAoFRHJpdmUSHy52ZWhp",
-            "Y2xlY29udHJvbGxlci5Ecml2ZVJlcXVlc3QaIC52ZWhpY2xlY29udHJvbGxl",
-            "ci5Ecml2ZVJlc3BvbnNlIgBCPwoiaW8uZ3JwYy5leGFtcGxlcy52ZWhpY2xl",
-            "Y29udHJvbGxlckIRVmVoaWNsZUNvbnRyb2xsZXJQAaICA0hMV2IGcHJvdG8z"));
+            "c3MYASABKAgiJAoTRHJpdmVGb3J3YXJkUmVxdWVzdBINCgV2YWx1ZRgBIAEo",
+            "AiIlChREcml2ZUJhY2t3YXJkUmVxdWVzdBINCgV2YWx1ZRgBIAEoAjKbAgoR",
+            "VmVoaWNsZUNvbnRyb2xsZXISTAoFRHJpdmUSHy52ZWhpY2xlY29udHJvbGxl",
+            "ci5Ecml2ZVJlcXVlc3QaIC52ZWhpY2xlY29udHJvbGxlci5Ecml2ZVJlc3Bv",
+            "bnNlIgASWgoMRHJpdmVGb3J3YXJkEiYudmVoaWNsZWNvbnRyb2xsZXIuRHJp",
+            "dmVGb3J3YXJkUmVxdWVzdBogLnZlaGljbGVjb250cm9sbGVyLkRyaXZlUmVz",
+            "cG9uc2UiABJcCg1Ecml2ZUJhY2t3YXJkEicudmVoaWNsZWNvbnRyb2xsZXIu",
+            "RHJpdmVCYWNrd2FyZFJlcXVlc3QaIC52ZWhpY2xlY29udHJvbGxlci5Ecml2",
+            "ZVJlc3BvbnNlIgBCPwoiaW8uZ3JwYy5leGFtcGxlcy52ZWhpY2xlY29udHJv",
+            "bGxlckIRVmVoaWNsZUNvbnRyb2xsZXJQAaICA0hMV2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Vehiclecontroller.DriveRequest), global::Vehiclecontroller.DriveRequest.Parser, new[]{ "Torque", "Angle" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Vehiclecontroller.DriveResponse), global::Vehiclecontroller.DriveResponse.Parser, new[]{ "Success" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Vehiclecontroller.DriveResponse), global::Vehiclecontroller.DriveResponse.Parser, new[]{ "Success" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Vehiclecontroller.DriveForwardRequest), global::Vehiclecontroller.DriveForwardRequest.Parser, new[]{ "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Vehiclecontroller.DriveBackwardRequest), global::Vehiclecontroller.DriveBackwardRequest.Parser, new[]{ "Value" }, null, null, null)
           }));
     }
     #endregion
@@ -320,6 +328,264 @@ namespace Vehiclecontroller {
             break;
           case 8: {
             Success = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class DriveForwardRequest : pb::IMessage<DriveForwardRequest> {
+    private static readonly pb::MessageParser<DriveForwardRequest> _parser = new pb::MessageParser<DriveForwardRequest>(() => new DriveForwardRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DriveForwardRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Vehiclecontroller.VehiclecontrollerReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DriveForwardRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DriveForwardRequest(DriveForwardRequest other) : this() {
+      value_ = other.value_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DriveForwardRequest Clone() {
+      return new DriveForwardRequest(this);
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 1;
+    private float value_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Value {
+      get { return value_; }
+      set {
+        value_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DriveForwardRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DriveForwardRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Value, other.Value)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Value != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Value);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Value != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(Value);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Value != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DriveForwardRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Value != 0F) {
+        Value = other.Value;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 13: {
+            Value = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+
+  }
+
+  public sealed partial class DriveBackwardRequest : pb::IMessage<DriveBackwardRequest> {
+    private static readonly pb::MessageParser<DriveBackwardRequest> _parser = new pb::MessageParser<DriveBackwardRequest>(() => new DriveBackwardRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<DriveBackwardRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Vehiclecontroller.VehiclecontrollerReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DriveBackwardRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DriveBackwardRequest(DriveBackwardRequest other) : this() {
+      value_ = other.value_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public DriveBackwardRequest Clone() {
+      return new DriveBackwardRequest(this);
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 1;
+    private float value_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float Value {
+      get { return value_; }
+      set {
+        value_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as DriveBackwardRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(DriveBackwardRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Value, other.Value)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Value != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Value);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+      if (Value != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(Value);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (Value != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(DriveBackwardRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Value != 0F) {
+        Value = other.Value;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 13: {
+            Value = input.ReadFloat();
             break;
           }
         }

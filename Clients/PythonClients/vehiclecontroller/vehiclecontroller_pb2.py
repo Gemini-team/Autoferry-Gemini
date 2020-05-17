@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='vehiclecontroller',
   syntax='proto3',
   serialized_options=_b('\n\"io.grpc.examples.vehiclecontrollerB\021VehicleControllerP\001\242\002\003HLW'),
-  serialized_pb=_b('\n)vehiclecontroller/vehiclecontroller.proto\x12\x11vehiclecontroller\"-\n\x0c\x44riveRequest\x12\x0e\n\x06torque\x18\x01 \x01(\x02\x12\r\n\x05\x61ngle\x18\x02 \x01(\x02\" \n\rDriveResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\x32\x61\n\x11VehicleController\x12L\n\x05\x44rive\x12\x1f.vehiclecontroller.DriveRequest\x1a .vehiclecontroller.DriveResponse\"\x00\x42?\n\"io.grpc.examples.vehiclecontrollerB\x11VehicleControllerP\x01\xa2\x02\x03HLWb\x06proto3')
+  serialized_pb=_b('\n)vehiclecontroller/vehiclecontroller.proto\x12\x11vehiclecontroller\"-\n\x0c\x44riveRequest\x12\x0e\n\x06torque\x18\x01 \x01(\x02\x12\r\n\x05\x61ngle\x18\x02 \x01(\x02\" \n\rDriveResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"$\n\x13\x44riveForwardRequest\x12\r\n\x05value\x18\x01 \x01(\x02\"%\n\x14\x44riveBackwardRequest\x12\r\n\x05value\x18\x01 \x01(\x02\x32\x9b\x02\n\x11VehicleController\x12L\n\x05\x44rive\x12\x1f.vehiclecontroller.DriveRequest\x1a .vehiclecontroller.DriveResponse\"\x00\x12Z\n\x0c\x44riveForward\x12&.vehiclecontroller.DriveForwardRequest\x1a .vehiclecontroller.DriveResponse\"\x00\x12\\\n\rDriveBackward\x12\'.vehiclecontroller.DriveBackwardRequest\x1a .vehiclecontroller.DriveResponse\"\x00\x42?\n\"io.grpc.examples.vehiclecontrollerB\x11VehicleControllerP\x01\xa2\x02\x03HLWb\x06proto3')
 )
 
 
@@ -94,8 +94,72 @@ _DRIVERESPONSE = _descriptor.Descriptor(
   serialized_end=143,
 )
 
+
+_DRIVEFORWARDREQUEST = _descriptor.Descriptor(
+  name='DriveForwardRequest',
+  full_name='vehiclecontroller.DriveForwardRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='value', full_name='vehiclecontroller.DriveForwardRequest.value', index=0,
+      number=1, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=145,
+  serialized_end=181,
+)
+
+
+_DRIVEBACKWARDREQUEST = _descriptor.Descriptor(
+  name='DriveBackwardRequest',
+  full_name='vehiclecontroller.DriveBackwardRequest',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='value', full_name='vehiclecontroller.DriveBackwardRequest.value', index=0,
+      number=1, type=2, cpp_type=6, label=1,
+      has_default_value=False, default_value=float(0),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=183,
+  serialized_end=220,
+)
+
 DESCRIPTOR.message_types_by_name['DriveRequest'] = _DRIVEREQUEST
 DESCRIPTOR.message_types_by_name['DriveResponse'] = _DRIVERESPONSE
+DESCRIPTOR.message_types_by_name['DriveForwardRequest'] = _DRIVEFORWARDREQUEST
+DESCRIPTOR.message_types_by_name['DriveBackwardRequest'] = _DRIVEBACKWARDREQUEST
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 DriveRequest = _reflection.GeneratedProtocolMessageType('DriveRequest', (_message.Message,), {
@@ -112,6 +176,20 @@ DriveResponse = _reflection.GeneratedProtocolMessageType('DriveResponse', (_mess
   })
 _sym_db.RegisterMessage(DriveResponse)
 
+DriveForwardRequest = _reflection.GeneratedProtocolMessageType('DriveForwardRequest', (_message.Message,), {
+  'DESCRIPTOR' : _DRIVEFORWARDREQUEST,
+  '__module__' : 'vehiclecontroller.vehiclecontroller_pb2'
+  # @@protoc_insertion_point(class_scope:vehiclecontroller.DriveForwardRequest)
+  })
+_sym_db.RegisterMessage(DriveForwardRequest)
+
+DriveBackwardRequest = _reflection.GeneratedProtocolMessageType('DriveBackwardRequest', (_message.Message,), {
+  'DESCRIPTOR' : _DRIVEBACKWARDREQUEST,
+  '__module__' : 'vehiclecontroller.vehiclecontroller_pb2'
+  # @@protoc_insertion_point(class_scope:vehiclecontroller.DriveBackwardRequest)
+  })
+_sym_db.RegisterMessage(DriveBackwardRequest)
+
 
 DESCRIPTOR._options = None
 
@@ -121,8 +199,8 @@ _VEHICLECONTROLLER = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   serialized_options=None,
-  serialized_start=145,
-  serialized_end=242,
+  serialized_start=223,
+  serialized_end=506,
   methods=[
   _descriptor.MethodDescriptor(
     name='Drive',
@@ -130,6 +208,24 @@ _VEHICLECONTROLLER = _descriptor.ServiceDescriptor(
     index=0,
     containing_service=None,
     input_type=_DRIVEREQUEST,
+    output_type=_DRIVERESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='DriveForward',
+    full_name='vehiclecontroller.VehicleController.DriveForward',
+    index=1,
+    containing_service=None,
+    input_type=_DRIVEFORWARDREQUEST,
+    output_type=_DRIVERESPONSE,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='DriveBackward',
+    full_name='vehiclecontroller.VehicleController.DriveBackward',
+    index=2,
+    containing_service=None,
+    input_type=_DRIVEBACKWARDREQUEST,
     output_type=_DRIVERESPONSE,
     serialized_options=None,
   ),
