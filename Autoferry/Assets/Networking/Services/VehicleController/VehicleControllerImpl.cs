@@ -131,9 +131,10 @@ namespace Assets.Networking.Services
 
         }
 
-        public override async Task<DriveResponse> DriveForward(DriveForwardRequest request, ServerCallContext context)
+        public override async Task<DriveResponse> DriveForward(DriveRequest request, ServerCallContext context)
         {
 
+            Debug.Log("DriveForward!");
             ManualResetEvent signalEvent = new ManualResetEvent(false);
             ThreadManager.ExecuteOnMainThread(() =>
             {
@@ -153,9 +154,9 @@ namespace Assets.Networking.Services
             });
         }
 
-        public override async Task<DriveResponse> DriveBackward(DriveBackwardRequest request, ServerCallContext context)
+        public override async Task<DriveResponse> DriveBackward(DriveRequest request, ServerCallContext context)
         {
-
+            Debug.Log("DriveBackward!");
             ManualResetEvent signalEvent = new ManualResetEvent(false);
             ThreadManager.ExecuteOnMainThread(() =>
             {

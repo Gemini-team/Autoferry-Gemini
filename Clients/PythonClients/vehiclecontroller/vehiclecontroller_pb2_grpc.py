@@ -21,12 +21,12 @@ class VehicleControllerStub(object):
         )
     self.DriveForward = channel.unary_unary(
         '/vehiclecontroller.VehicleController/DriveForward',
-        request_serializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveForwardRequest.SerializeToString,
+        request_serializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveRequest.SerializeToString,
         response_deserializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveResponse.FromString,
         )
     self.DriveBackward = channel.unary_unary(
         '/vehiclecontroller.VehicleController/DriveBackward',
-        request_serializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveBackwardRequest.SerializeToString,
+        request_serializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveRequest.SerializeToString,
         response_deserializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveResponse.FromString,
         )
 
@@ -66,12 +66,12 @@ def add_VehicleControllerServicer_to_server(servicer, server):
       ),
       'DriveForward': grpc.unary_unary_rpc_method_handler(
           servicer.DriveForward,
-          request_deserializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveForwardRequest.FromString,
+          request_deserializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveRequest.FromString,
           response_serializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveResponse.SerializeToString,
       ),
       'DriveBackward': grpc.unary_unary_rpc_method_handler(
           servicer.DriveBackward,
-          request_deserializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveBackwardRequest.FromString,
+          request_deserializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveRequest.FromString,
           response_serializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveResponse.SerializeToString,
       ),
   }

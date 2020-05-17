@@ -28,15 +28,15 @@ namespace Vehiclecontroller {
             "dmVoaWNsZWNvbnRyb2xsZXIiLQoMRHJpdmVSZXF1ZXN0Eg4KBnRvcnF1ZRgB",
             "IAEoAhINCgVhbmdsZRgCIAEoAiIgCg1Ecml2ZVJlc3BvbnNlEg8KB3N1Y2Nl",
             "c3MYASABKAgiJAoTRHJpdmVGb3J3YXJkUmVxdWVzdBINCgV2YWx1ZRgBIAEo",
-            "AiIlChREcml2ZUJhY2t3YXJkUmVxdWVzdBINCgV2YWx1ZRgBIAEoAjKbAgoR",
+            "AiIlChREcml2ZUJhY2t3YXJkUmVxdWVzdBINCgV2YWx1ZRgBIAEoAjKMAgoR",
             "VmVoaWNsZUNvbnRyb2xsZXISTAoFRHJpdmUSHy52ZWhpY2xlY29udHJvbGxl",
             "ci5Ecml2ZVJlcXVlc3QaIC52ZWhpY2xlY29udHJvbGxlci5Ecml2ZVJlc3Bv",
-            "bnNlIgASWgoMRHJpdmVGb3J3YXJkEiYudmVoaWNsZWNvbnRyb2xsZXIuRHJp",
-            "dmVGb3J3YXJkUmVxdWVzdBogLnZlaGljbGVjb250cm9sbGVyLkRyaXZlUmVz",
-            "cG9uc2UiABJcCg1Ecml2ZUJhY2t3YXJkEicudmVoaWNsZWNvbnRyb2xsZXIu",
-            "RHJpdmVCYWNrd2FyZFJlcXVlc3QaIC52ZWhpY2xlY29udHJvbGxlci5Ecml2",
-            "ZVJlc3BvbnNlIgBCPwoiaW8uZ3JwYy5leGFtcGxlcy52ZWhpY2xlY29udHJv",
-            "bGxlckIRVmVoaWNsZUNvbnRyb2xsZXJQAaICA0hMV2IGcHJvdG8z"));
+            "bnNlIgASUwoMRHJpdmVGb3J3YXJkEh8udmVoaWNsZWNvbnRyb2xsZXIuRHJp",
+            "dmVSZXF1ZXN0GiAudmVoaWNsZWNvbnRyb2xsZXIuRHJpdmVSZXNwb25zZSIA",
+            "ElQKDURyaXZlQmFja3dhcmQSHy52ZWhpY2xlY29udHJvbGxlci5Ecml2ZVJl",
+            "cXVlc3QaIC52ZWhpY2xlY29udHJvbGxlci5Ecml2ZVJlc3BvbnNlIgBCPwoi",
+            "aW8uZ3JwYy5leGFtcGxlcy52ZWhpY2xlY29udHJvbGxlckIRVmVoaWNsZUNv",
+            "bnRyb2xsZXJQAaICA0hMV2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

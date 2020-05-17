@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='vehiclecontroller',
   syntax='proto3',
   serialized_options=_b('\n\"io.grpc.examples.vehiclecontrollerB\021VehicleControllerP\001\242\002\003HLW'),
-  serialized_pb=_b('\n)vehiclecontroller/vehiclecontroller.proto\x12\x11vehiclecontroller\"-\n\x0c\x44riveRequest\x12\x0e\n\x06torque\x18\x01 \x01(\x02\x12\r\n\x05\x61ngle\x18\x02 \x01(\x02\" \n\rDriveResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"$\n\x13\x44riveForwardRequest\x12\r\n\x05value\x18\x01 \x01(\x02\"%\n\x14\x44riveBackwardRequest\x12\r\n\x05value\x18\x01 \x01(\x02\x32\x9b\x02\n\x11VehicleController\x12L\n\x05\x44rive\x12\x1f.vehiclecontroller.DriveRequest\x1a .vehiclecontroller.DriveResponse\"\x00\x12Z\n\x0c\x44riveForward\x12&.vehiclecontroller.DriveForwardRequest\x1a .vehiclecontroller.DriveResponse\"\x00\x12\\\n\rDriveBackward\x12\'.vehiclecontroller.DriveBackwardRequest\x1a .vehiclecontroller.DriveResponse\"\x00\x42?\n\"io.grpc.examples.vehiclecontrollerB\x11VehicleControllerP\x01\xa2\x02\x03HLWb\x06proto3')
+  serialized_pb=_b('\n)vehiclecontroller/vehiclecontroller.proto\x12\x11vehiclecontroller\"-\n\x0c\x44riveRequest\x12\x0e\n\x06torque\x18\x01 \x01(\x02\x12\r\n\x05\x61ngle\x18\x02 \x01(\x02\" \n\rDriveResponse\x12\x0f\n\x07success\x18\x01 \x01(\x08\"$\n\x13\x44riveForwardRequest\x12\r\n\x05value\x18\x01 \x01(\x02\"%\n\x14\x44riveBackwardRequest\x12\r\n\x05value\x18\x01 \x01(\x02\x32\x8c\x02\n\x11VehicleController\x12L\n\x05\x44rive\x12\x1f.vehiclecontroller.DriveRequest\x1a .vehiclecontroller.DriveResponse\"\x00\x12S\n\x0c\x44riveForward\x12\x1f.vehiclecontroller.DriveRequest\x1a .vehiclecontroller.DriveResponse\"\x00\x12T\n\rDriveBackward\x12\x1f.vehiclecontroller.DriveRequest\x1a .vehiclecontroller.DriveResponse\"\x00\x42?\n\"io.grpc.examples.vehiclecontrollerB\x11VehicleControllerP\x01\xa2\x02\x03HLWb\x06proto3')
 )
 
 
@@ -200,7 +200,7 @@ _VEHICLECONTROLLER = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   serialized_start=223,
-  serialized_end=506,
+  serialized_end=491,
   methods=[
   _descriptor.MethodDescriptor(
     name='Drive',
@@ -216,7 +216,7 @@ _VEHICLECONTROLLER = _descriptor.ServiceDescriptor(
     full_name='vehiclecontroller.VehicleController.DriveForward',
     index=1,
     containing_service=None,
-    input_type=_DRIVEFORWARDREQUEST,
+    input_type=_DRIVEREQUEST,
     output_type=_DRIVERESPONSE,
     serialized_options=None,
   ),
@@ -225,7 +225,7 @@ _VEHICLECONTROLLER = _descriptor.ServiceDescriptor(
     full_name='vehiclecontroller.VehicleController.DriveBackward',
     index=2,
     containing_service=None,
-    input_type=_DRIVEBACKWARDREQUEST,
+    input_type=_DRIVEREQUEST,
     output_type=_DRIVERESPONSE,
     serialized_options=None,
   ),
