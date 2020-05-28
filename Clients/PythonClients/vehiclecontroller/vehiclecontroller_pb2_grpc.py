@@ -14,11 +14,6 @@ class VehicleControllerStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.Drive = channel.unary_unary(
-        '/vehiclecontroller.VehicleController/Drive',
-        request_serializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveRequest.SerializeToString,
-        response_deserializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveResponse.FromString,
-        )
     self.DriveForward = channel.unary_unary(
         '/vehiclecontroller.VehicleController/DriveForward',
         request_serializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveRequest.SerializeToString,
@@ -29,18 +24,26 @@ class VehicleControllerStub(object):
         request_serializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveRequest.SerializeToString,
         response_deserializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveResponse.FromString,
         )
+    self.Steer = channel.unary_unary(
+        '/vehiclecontroller.VehicleController/Steer',
+        request_serializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveRequest.SerializeToString,
+        response_deserializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveResponse.FromString,
+        )
+    self.Idle = channel.unary_unary(
+        '/vehiclecontroller.VehicleController/Idle',
+        request_serializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveRequest.SerializeToString,
+        response_deserializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveResponse.FromString,
+        )
+    self.Brake = channel.unary_unary(
+        '/vehiclecontroller.VehicleController/Brake',
+        request_serializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveRequest.SerializeToString,
+        response_deserializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveResponse.FromString,
+        )
 
 
 class VehicleControllerServicer(object):
   # missing associated documentation comment in .proto file
   pass
-
-  def Drive(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
 
   def DriveForward(self, request, context):
     # missing associated documentation comment in .proto file
@@ -56,14 +59,30 @@ class VehicleControllerServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def Steer(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def Idle(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
+  def Brake(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_VehicleControllerServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'Drive': grpc.unary_unary_rpc_method_handler(
-          servicer.Drive,
-          request_deserializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveRequest.FromString,
-          response_serializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveResponse.SerializeToString,
-      ),
       'DriveForward': grpc.unary_unary_rpc_method_handler(
           servicer.DriveForward,
           request_deserializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveRequest.FromString,
@@ -71,6 +90,21 @@ def add_VehicleControllerServicer_to_server(servicer, server):
       ),
       'DriveBackward': grpc.unary_unary_rpc_method_handler(
           servicer.DriveBackward,
+          request_deserializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveRequest.FromString,
+          response_serializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveResponse.SerializeToString,
+      ),
+      'Steer': grpc.unary_unary_rpc_method_handler(
+          servicer.Steer,
+          request_deserializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveRequest.FromString,
+          response_serializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveResponse.SerializeToString,
+      ),
+      'Idle': grpc.unary_unary_rpc_method_handler(
+          servicer.Idle,
+          request_deserializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveRequest.FromString,
+          response_serializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveResponse.SerializeToString,
+      ),
+      'Brake': grpc.unary_unary_rpc_method_handler(
+          servicer.Brake,
           request_deserializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveRequest.FromString,
           response_serializer=vehiclecontroller_dot_vehiclecontroller__pb2.DriveResponse.SerializeToString,
       ),

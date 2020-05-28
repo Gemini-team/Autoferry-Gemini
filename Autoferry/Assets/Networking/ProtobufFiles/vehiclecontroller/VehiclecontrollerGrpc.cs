@@ -15,13 +15,6 @@ namespace Vehiclecontroller {
     static readonly grpc::Marshaller<global::Vehiclecontroller.DriveRequest> __Marshaller_vehiclecontroller_DriveRequest = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Vehiclecontroller.DriveRequest.Parser.ParseFrom);
     static readonly grpc::Marshaller<global::Vehiclecontroller.DriveResponse> __Marshaller_vehiclecontroller_DriveResponse = grpc::Marshallers.Create((arg) => global::Google.Protobuf.MessageExtensions.ToByteArray(arg), global::Vehiclecontroller.DriveResponse.Parser.ParseFrom);
 
-    static readonly grpc::Method<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse> __Method_Drive = new grpc::Method<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "Drive",
-        __Marshaller_vehiclecontroller_DriveRequest,
-        __Marshaller_vehiclecontroller_DriveResponse);
-
     static readonly grpc::Method<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse> __Method_DriveForward = new grpc::Method<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -36,6 +29,27 @@ namespace Vehiclecontroller {
         __Marshaller_vehiclecontroller_DriveRequest,
         __Marshaller_vehiclecontroller_DriveResponse);
 
+    static readonly grpc::Method<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse> __Method_Steer = new grpc::Method<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Steer",
+        __Marshaller_vehiclecontroller_DriveRequest,
+        __Marshaller_vehiclecontroller_DriveResponse);
+
+    static readonly grpc::Method<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse> __Method_Idle = new grpc::Method<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Idle",
+        __Marshaller_vehiclecontroller_DriveRequest,
+        __Marshaller_vehiclecontroller_DriveResponse);
+
+    static readonly grpc::Method<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse> __Method_Brake = new grpc::Method<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "Brake",
+        __Marshaller_vehiclecontroller_DriveRequest,
+        __Marshaller_vehiclecontroller_DriveResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -46,17 +60,27 @@ namespace Vehiclecontroller {
     [grpc::BindServiceMethod(typeof(VehicleController), "BindService")]
     public abstract partial class VehicleControllerBase
     {
-      public virtual global::System.Threading.Tasks.Task<global::Vehiclecontroller.DriveResponse> Drive(global::Vehiclecontroller.DriveRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
       public virtual global::System.Threading.Tasks.Task<global::Vehiclecontroller.DriveResponse> DriveForward(global::Vehiclecontroller.DriveRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       public virtual global::System.Threading.Tasks.Task<global::Vehiclecontroller.DriveResponse> DriveBackward(global::Vehiclecontroller.DriveRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Vehiclecontroller.DriveResponse> Steer(global::Vehiclecontroller.DriveRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Vehiclecontroller.DriveResponse> Idle(global::Vehiclecontroller.DriveRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::Vehiclecontroller.DriveResponse> Brake(global::Vehiclecontroller.DriveRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -86,22 +110,6 @@ namespace Vehiclecontroller {
       {
       }
 
-      public virtual global::Vehiclecontroller.DriveResponse Drive(global::Vehiclecontroller.DriveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return Drive(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      public virtual global::Vehiclecontroller.DriveResponse Drive(global::Vehiclecontroller.DriveRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_Drive, null, options, request);
-      }
-      public virtual grpc::AsyncUnaryCall<global::Vehiclecontroller.DriveResponse> DriveAsync(global::Vehiclecontroller.DriveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return DriveAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      public virtual grpc::AsyncUnaryCall<global::Vehiclecontroller.DriveResponse> DriveAsync(global::Vehiclecontroller.DriveRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_Drive, null, options, request);
-      }
       public virtual global::Vehiclecontroller.DriveResponse DriveForward(global::Vehiclecontroller.DriveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return DriveForward(request, new grpc::CallOptions(headers, deadline, cancellationToken));
@@ -134,6 +142,54 @@ namespace Vehiclecontroller {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DriveBackward, null, options, request);
       }
+      public virtual global::Vehiclecontroller.DriveResponse Steer(global::Vehiclecontroller.DriveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return Steer(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Vehiclecontroller.DriveResponse Steer(global::Vehiclecontroller.DriveRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Steer, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Vehiclecontroller.DriveResponse> SteerAsync(global::Vehiclecontroller.DriveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SteerAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Vehiclecontroller.DriveResponse> SteerAsync(global::Vehiclecontroller.DriveRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Steer, null, options, request);
+      }
+      public virtual global::Vehiclecontroller.DriveResponse Idle(global::Vehiclecontroller.DriveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return Idle(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Vehiclecontroller.DriveResponse Idle(global::Vehiclecontroller.DriveRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Idle, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Vehiclecontroller.DriveResponse> IdleAsync(global::Vehiclecontroller.DriveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return IdleAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Vehiclecontroller.DriveResponse> IdleAsync(global::Vehiclecontroller.DriveRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Idle, null, options, request);
+      }
+      public virtual global::Vehiclecontroller.DriveResponse Brake(global::Vehiclecontroller.DriveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return Brake(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual global::Vehiclecontroller.DriveResponse Brake(global::Vehiclecontroller.DriveRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_Brake, null, options, request);
+      }
+      public virtual grpc::AsyncUnaryCall<global::Vehiclecontroller.DriveResponse> BrakeAsync(global::Vehiclecontroller.DriveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BrakeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      public virtual grpc::AsyncUnaryCall<global::Vehiclecontroller.DriveResponse> BrakeAsync(global::Vehiclecontroller.DriveRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_Brake, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override VehicleControllerClient NewInstance(ClientBaseConfiguration configuration)
       {
@@ -146,9 +202,11 @@ namespace Vehiclecontroller {
     public static grpc::ServerServiceDefinition BindService(VehicleControllerBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_Drive, serviceImpl.Drive)
           .AddMethod(__Method_DriveForward, serviceImpl.DriveForward)
-          .AddMethod(__Method_DriveBackward, serviceImpl.DriveBackward).Build();
+          .AddMethod(__Method_DriveBackward, serviceImpl.DriveBackward)
+          .AddMethod(__Method_Steer, serviceImpl.Steer)
+          .AddMethod(__Method_Idle, serviceImpl.Idle)
+          .AddMethod(__Method_Brake, serviceImpl.Brake).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -157,9 +215,11 @@ namespace Vehiclecontroller {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, VehicleControllerBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_Drive, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse>(serviceImpl.Drive));
       serviceBinder.AddMethod(__Method_DriveForward, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse>(serviceImpl.DriveForward));
       serviceBinder.AddMethod(__Method_DriveBackward, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse>(serviceImpl.DriveBackward));
+      serviceBinder.AddMethod(__Method_Steer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse>(serviceImpl.Steer));
+      serviceBinder.AddMethod(__Method_Idle, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse>(serviceImpl.Idle));
+      serviceBinder.AddMethod(__Method_Brake, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Vehiclecontroller.DriveRequest, global::Vehiclecontroller.DriveResponse>(serviceImpl.Brake));
     }
 
   }

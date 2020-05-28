@@ -41,7 +41,7 @@ if __name__ == '__main__':
 
     # Sensormanagement
     # Port when in Editor
-    sensormanagement_channel = grpc.insecure_channel('localhost:50085')
+    sensormanagement_channel = grpc.insecure_channel('localhost:50083')
 
     # Port when in build
     #sensormanagement_channel = grpc.insecure_channel('localhost:50082')
@@ -59,7 +59,7 @@ if __name__ == '__main__':
 
     # Sensordata
     # Port when in Editor
-    sensordata_channel = grpc.insecure_channel('localhost:50083')
+    sensordata_channel = grpc.insecure_channel('localhost:50084')
 
     #Port when in build
     #sensordata_channel = grpc.insecure_channel('localhost:50080')

@@ -90,7 +90,7 @@ namespace Assets.Networking.Services
 
             if ( _renderTexture == null)
             {
-                _renderTexture = new RenderTexture(800, 640, 24, RenderTextureFormat.Default, 0);
+                _renderTexture = new RenderTexture(800, 450, 24, RenderTextureFormat.Default, 0);
                 camera.targetTexture = _renderTexture;
             } 
 

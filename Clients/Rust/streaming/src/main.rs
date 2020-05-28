@@ -51,7 +51,7 @@ use sensordata::SensordataRequest;
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 
-   let mut client = SensordataClient::connect("http://[::1]:50084").await?;
+   let mut client = SensordataClient::connect("http://[::1]:50087").await?;
 
     let mut camera = Camera {
         position: glm::vec3(0.0, 0.0, 3.0),

@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='cameradata',
   syntax='proto3',
   serialized_options=_b('\n\033io.grpc.examples.cameradataB\nCameradataP\001\242\002\003HLW'),
-  serialized_pb=_b('\n\x1b\x63\x61meradata/cameradata.proto\x12\ncameradata\"&\n\x11\x43\x61meradataRequest\x12\x11\n\toperation\x18\x01 \x01(\t\"@\n\x12\x43\x61meradataResponse\x12\x11\n\timagedata\x18\x01 \x01(\x0c\x12\x17\n\x0fimagedataLength\x18\x02 \x01(\r2\xbf\x01\n\x11\x43\x61meradataService\x12T\n\x11TransferImagedata\x12\x1d.cameradata.CameradataRequest\x1a\x1e.cameradata.CameradataResponse\"\x00\x12T\n\x0fStreamImagedata\x12\x1d.cameradata.CameradataRequest\x1a\x1e.cameradata.CameradataResponse\"\x00\x30\x01\x42\x31\n\x1bio.grpc.examples.cameradataB\nCameradataP\x01\xa2\x02\x03HLWb\x06proto3')
+  serialized_pb=_b('\n\x1b\x63\x61meradata/cameradata.proto\x12\ncameradata\"&\n\x11\x43\x61meradataRequest\x12\x11\n\toperation\x18\x01 \x01(\t\"@\n\x12\x43\x61meradataResponse\x12\x11\n\timagedata\x18\x01 \x01(\x0c\x12\x17\n\x0fimagedataLength\x18\x02 \x01(\x05\x32\xbf\x01\n\x11\x43\x61meradataService\x12T\n\x11TransferImagedata\x12\x1d.cameradata.CameradataRequest\x1a\x1e.cameradata.CameradataResponse\"\x00\x12T\n\x0fStreamImagedata\x12\x1d.cameradata.CameradataRequest\x1a\x1e.cameradata.CameradataResponse\"\x00\x30\x01\x42\x31\n\x1bio.grpc.examples.cameradataB\nCameradataP\x01\xa2\x02\x03HLWb\x06proto3')
 )
 
 
@@ -73,7 +73,7 @@ _CAMERADATARESPONSE = _descriptor.Descriptor(
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='imagedataLength', full_name='cameradata.CameradataResponse.imagedataLength', index=1,
-      number=2, type=13, cpp_type=3, label=1,
+      number=2, type=5, cpp_type=1, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,

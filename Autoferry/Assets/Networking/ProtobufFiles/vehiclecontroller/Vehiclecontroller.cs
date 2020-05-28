@@ -25,25 +25,25 @@ namespace Vehiclecontroller {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cil2ZWhpY2xlY29udHJvbGxlci92ZWhpY2xlY29udHJvbGxlci5wcm90bxIR",
-            "dmVoaWNsZWNvbnRyb2xsZXIiLQoMRHJpdmVSZXF1ZXN0Eg4KBnRvcnF1ZRgB",
-            "IAEoAhINCgVhbmdsZRgCIAEoAiIgCg1Ecml2ZVJlc3BvbnNlEg8KB3N1Y2Nl",
-            "c3MYASABKAgiJAoTRHJpdmVGb3J3YXJkUmVxdWVzdBINCgV2YWx1ZRgBIAEo",
-            "AiIlChREcml2ZUJhY2t3YXJkUmVxdWVzdBINCgV2YWx1ZRgBIAEoAjKMAgoR",
-            "VmVoaWNsZUNvbnRyb2xsZXISTAoFRHJpdmUSHy52ZWhpY2xlY29udHJvbGxl",
+            "dmVoaWNsZWNvbnRyb2xsZXIiQgoMRHJpdmVSZXF1ZXN0Eg4KBnRvcnF1ZRgB",
+            "IAEoAhINCgVhbmdsZRgCIAEoAhITCgticmFrZVRvcnF1ZRgDIAEoAiIgCg1E",
+            "cml2ZVJlc3BvbnNlEg8KB3N1Y2Nlc3MYASABKAgypwMKEVZlaGljbGVDb250",
+            "cm9sbGVyElMKDERyaXZlRm9yd2FyZBIfLnZlaGljbGVjb250cm9sbGVyLkRy",
+            "aXZlUmVxdWVzdBogLnZlaGljbGVjb250cm9sbGVyLkRyaXZlUmVzcG9uc2Ui",
+            "ABJUCg1Ecml2ZUJhY2t3YXJkEh8udmVoaWNsZWNvbnRyb2xsZXIuRHJpdmVS",
+            "ZXF1ZXN0GiAudmVoaWNsZWNvbnRyb2xsZXIuRHJpdmVSZXNwb25zZSIAEkwK",
+            "BVN0ZWVyEh8udmVoaWNsZWNvbnRyb2xsZXIuRHJpdmVSZXF1ZXN0GiAudmVo",
+            "aWNsZWNvbnRyb2xsZXIuRHJpdmVSZXNwb25zZSIAEksKBElkbGUSHy52ZWhp",
+            "Y2xlY29udHJvbGxlci5Ecml2ZVJlcXVlc3QaIC52ZWhpY2xlY29udHJvbGxl",
+            "ci5Ecml2ZVJlc3BvbnNlIgASTAoFQnJha2USHy52ZWhpY2xlY29udHJvbGxl",
             "ci5Ecml2ZVJlcXVlc3QaIC52ZWhpY2xlY29udHJvbGxlci5Ecml2ZVJlc3Bv",
-            "bnNlIgASUwoMRHJpdmVGb3J3YXJkEh8udmVoaWNsZWNvbnRyb2xsZXIuRHJp",
-            "dmVSZXF1ZXN0GiAudmVoaWNsZWNvbnRyb2xsZXIuRHJpdmVSZXNwb25zZSIA",
-            "ElQKDURyaXZlQmFja3dhcmQSHy52ZWhpY2xlY29udHJvbGxlci5Ecml2ZVJl",
-            "cXVlc3QaIC52ZWhpY2xlY29udHJvbGxlci5Ecml2ZVJlc3BvbnNlIgBCPwoi",
-            "aW8uZ3JwYy5leGFtcGxlcy52ZWhpY2xlY29udHJvbGxlckIRVmVoaWNsZUNv",
-            "bnRyb2xsZXJQAaICA0hMV2IGcHJvdG8z"));
+            "bnNlIgBCPwoiaW8uZ3JwYy5leGFtcGxlcy52ZWhpY2xlY29udHJvbGxlckIR",
+            "VmVoaWNsZUNvbnRyb2xsZXJQAaICA0hMV2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Vehiclecontroller.DriveRequest), global::Vehiclecontroller.DriveRequest.Parser, new[]{ "Torque", "Angle" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Vehiclecontroller.DriveResponse), global::Vehiclecontroller.DriveResponse.Parser, new[]{ "Success" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Vehiclecontroller.DriveForwardRequest), global::Vehiclecontroller.DriveForwardRequest.Parser, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Vehiclecontroller.DriveBackwardRequest), global::Vehiclecontroller.DriveBackwardRequest.Parser, new[]{ "Value" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Vehiclecontroller.DriveRequest), global::Vehiclecontroller.DriveRequest.Parser, new[]{ "Torque", "Angle", "BrakeTorque" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Vehiclecontroller.DriveResponse), global::Vehiclecontroller.DriveResponse.Parser, new[]{ "Success" }, null, null, null)
           }));
     }
     #endregion
@@ -77,6 +77,7 @@ namespace Vehiclecontroller {
     public DriveRequest(DriveRequest other) : this() {
       torque_ = other.torque_;
       angle_ = other.angle_;
+      brakeTorque_ = other.brakeTorque_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -107,6 +108,17 @@ namespace Vehiclecontroller {
       }
     }
 
+    /// <summary>Field number for the "brakeTorque" field.</summary>
+    public const int BrakeTorqueFieldNumber = 3;
+    private float brakeTorque_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float BrakeTorque {
+      get { return brakeTorque_; }
+      set {
+        brakeTorque_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as DriveRequest);
@@ -122,6 +134,7 @@ namespace Vehiclecontroller {
       }
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Torque, other.Torque)) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Angle, other.Angle)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(BrakeTorque, other.BrakeTorque)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -130,6 +143,7 @@ namespace Vehiclecontroller {
       int hash = 1;
       if (Torque != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Torque);
       if (Angle != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Angle);
+      if (BrakeTorque != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(BrakeTorque);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -151,6 +165,10 @@ namespace Vehiclecontroller {
         output.WriteRawTag(21);
         output.WriteFloat(Angle);
       }
+      if (BrakeTorque != 0F) {
+        output.WriteRawTag(29);
+        output.WriteFloat(BrakeTorque);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -163,6 +181,9 @@ namespace Vehiclecontroller {
         size += 1 + 4;
       }
       if (Angle != 0F) {
+        size += 1 + 4;
+      }
+      if (BrakeTorque != 0F) {
         size += 1 + 4;
       }
       if (_unknownFields != null) {
@@ -182,6 +203,9 @@ namespace Vehiclecontroller {
       if (other.Angle != 0F) {
         Angle = other.Angle;
       }
+      if (other.BrakeTorque != 0F) {
+        BrakeTorque = other.BrakeTorque;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -199,6 +223,10 @@ namespace Vehiclecontroller {
           }
           case 21: {
             Angle = input.ReadFloat();
+            break;
+          }
+          case 29: {
+            BrakeTorque = input.ReadFloat();
             break;
           }
         }
@@ -328,264 +356,6 @@ namespace Vehiclecontroller {
             break;
           case 8: {
             Success = input.ReadBool();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class DriveForwardRequest : pb::IMessage<DriveForwardRequest> {
-    private static readonly pb::MessageParser<DriveForwardRequest> _parser = new pb::MessageParser<DriveForwardRequest>(() => new DriveForwardRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<DriveForwardRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Vehiclecontroller.VehiclecontrollerReflection.Descriptor.MessageTypes[2]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DriveForwardRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DriveForwardRequest(DriveForwardRequest other) : this() {
-      value_ = other.value_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DriveForwardRequest Clone() {
-      return new DriveForwardRequest(this);
-    }
-
-    /// <summary>Field number for the "value" field.</summary>
-    public const int ValueFieldNumber = 1;
-    private float value_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float Value {
-      get { return value_; }
-      set {
-        value_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as DriveForwardRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(DriveForwardRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Value, other.Value)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Value != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Value);
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Value != 0F) {
-        output.WriteRawTag(13);
-        output.WriteFloat(Value);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Value != 0F) {
-        size += 1 + 4;
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(DriveForwardRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Value != 0F) {
-        Value = other.Value;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 13: {
-            Value = input.ReadFloat();
-            break;
-          }
-        }
-      }
-    }
-
-  }
-
-  public sealed partial class DriveBackwardRequest : pb::IMessage<DriveBackwardRequest> {
-    private static readonly pb::MessageParser<DriveBackwardRequest> _parser = new pb::MessageParser<DriveBackwardRequest>(() => new DriveBackwardRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pb::MessageParser<DriveBackwardRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Vehiclecontroller.VehiclecontrollerReflection.Descriptor.MessageTypes[3]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DriveBackwardRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DriveBackwardRequest(DriveBackwardRequest other) : this() {
-      value_ = other.value_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public DriveBackwardRequest Clone() {
-      return new DriveBackwardRequest(this);
-    }
-
-    /// <summary>Field number for the "value" field.</summary>
-    public const int ValueFieldNumber = 1;
-    private float value_;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public float Value {
-      get { return value_; }
-      set {
-        value_ = value;
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override bool Equals(object other) {
-      return Equals(other as DriveBackwardRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public bool Equals(DriveBackwardRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Value, other.Value)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Value != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Value);
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void WriteTo(pb::CodedOutputStream output) {
-      if (Value != 0F) {
-        output.WriteRawTag(13);
-        output.WriteFloat(Value);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public int CalculateSize() {
-      int size = 0;
-      if (Value != 0F) {
-        size += 1 + 4;
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(DriveBackwardRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Value != 0F) {
-        Value = other.Value;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public void MergeFrom(pb::CodedInputStream input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 13: {
-            Value = input.ReadFloat();
             break;
           }
         }
