@@ -8,7 +8,7 @@ namespace Assets.Networking.Services
 {
     static class ServicePortGenerator
     {
-        static int port = 50080;
+        static int port = 50060;
 
         public static int GenPort()
         {

@@ -26,8 +26,6 @@ if __name__ == '__main__':
 
     vehiclecontroller_channel = grpc.insecure_channel(ip + ':' + port)
 
-    #vehiclecontroller_channel = grpc.insecure_channel('192.168.1.106:50080')
-
     vehiclecontroller_stub = vehiclecontroller_pb2_grpc.VehicleControllerStub(vehiclecontroller_channel)
 
     command = ""
