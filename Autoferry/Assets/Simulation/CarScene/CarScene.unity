@@ -1796,39 +1796,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 233520130}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &244506019
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 244506020}
-  m_Layer: 8
-  m_Name: CamRigFerry
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &244506020
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 244506019}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 896057243}
-  - {fileID: 2021133042}
-  - {fileID: 1103693905}
-  m_Father: {fileID: 4135867760923823028}
-  m_RootOrder: 60
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &245214240 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: af737ec27fbf0af43acdb172eda053c5,
@@ -2478,7 +2445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &340116747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2755,7 +2722,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &358376146
 Transform:
   m_ObjectHideFlags: 0
@@ -2783,7 +2750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  host: 192.168.1.183
+  host: 192.168.1.106
 --- !u!114 &358376148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3632,6 +3599,39 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &473962688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 473962689}
+  m_Layer: 0
+  m_Name: CamRigFerry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &473962689
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473962688}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1597110231}
+  - {fileID: 712749173}
+  - {fileID: 1459059813}
+  m_Father: {fileID: 354528773}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &521784326
 GameObject:
   m_ObjectHideFlags: 0
@@ -4145,6 +4145,36 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &712749172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 712749173}
+  m_Layer: 0
+  m_Name: CamPositionFerry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &712749173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712749172}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 5.06, z: -11.06}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 473962689}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &715830131 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100202, guid: e1e88a151e809a24298c418409c5022c,
@@ -6904,36 +6934,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 890845895}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &896057242
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 896057243}
-  m_Layer: 8
-  m_Name: CamLookAtTargetFerry
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &896057243
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 896057242}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 244506020}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &913610232
 GameObject:
   m_ObjectHideFlags: 0
@@ -8021,7 +8021,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &986102150
 Transform:
   m_ObjectHideFlags: 0
@@ -8043,7 +8043,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 986102149}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3f9a720e86e6243a389dcce389040366, type: 3}
   m_Name: 
@@ -8084,9 +8084,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothing: 6
-  lookAtTarget: {fileID: 896057243}
-  positionTarget: {fileID: 2021133042}
-  sideView: {fileID: 1103693905}
+  lookAtTarget: {fileID: 1597110231}
+  positionTarget: {fileID: 712749173}
+  sideView: {fileID: 1459059813}
   advancedOptions:
     updateCameraInUpdate: 1
     updateCameraInFixedUpdate: 1
@@ -9802,7 +9802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  host: 192.168.1.183
+  host: 192.168.1.106
 --- !u!114 &1063748821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9985,36 +9985,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1103693904
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1103693905}
-  m_Layer: 8
-  m_Name: CamSidePositionFerry
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1103693905
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103693904}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.61, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 244506020}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1107369175
 GameObject:
   m_ObjectHideFlags: 1
@@ -10171,7 +10141,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1168648247
 Transform:
   m_ObjectHideFlags: 0
@@ -10199,7 +10169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  host: 192.168.1.183
+  host: 192.168.1.106
 --- !u!114 &1168648249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10494,7 +10464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1000013904118194, guid: 6577377bae7db18429e690f8f8f57881, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1000014255813804, guid: 6577377bae7db18429e690f8f8f57881, type: 3}
       propertyPath: m_Name
@@ -11751,6 +11721,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1449830253}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1459059812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1459059813}
+  m_Layer: 0
+  m_Name: CamPositionSideFerry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1459059813
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459059812}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.18, y: 1.84, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 473962689}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1461410243
 GameObject:
   m_ObjectHideFlags: 0
@@ -12175,6 +12175,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1574159660}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1597110230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1597110231}
+  m_Layer: 0
+  m_Name: CamLookAtTargetFerry
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1597110231
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597110230}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 2.94, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 473962689}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1598507522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13869,36 +13899,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2021133041
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2021133042}
-  m_Layer: 8
-  m_Name: CamPositionFerry
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2021133042
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2021133041}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 5.31, z: -13.08}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 244506020}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2026818127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14432,7 +14432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd1f3f1d9df1c34ea6e9b041052a6db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  host: 192.168.1.183
+  host: 192.168.1.106
   port: 50080
   wheelDrive: {fileID: 665291106}
 --- !u!1 &2108175050
@@ -14453,7 +14453,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2108175051
 Transform:
   m_ObjectHideFlags: 0
@@ -14481,7 +14481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  host: 192.168.1.183
+  host: 192.168.1.106
 --- !u!114 &2108175053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15423,12 +15423,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!4 &4135867760923823028 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8943930186680953648, guid: 4fccb26b4069f05449d400cbcfce4637,
-    type: 3}
-  m_PrefabInstance: {fileID: 4135867760923823021}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4736078881781187840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15510,3 +15504,23 @@ PrefabInstance:
     - {fileID: 2205166076248840321, guid: 5dec818f551cc4045bcc15d2dfac64dc, type: 3}
     - {fileID: 8437029911632097531, guid: 5dec818f551cc4045bcc15d2dfac64dc, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5dec818f551cc4045bcc15d2dfac64dc, type: 3}
+--- !u!1 &4736078881781187841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1482485092369598711, guid: 5dec818f551cc4045bcc15d2dfac64dc,
+    type: 3}
+  m_PrefabInstance: {fileID: 4736078881781187840}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4736078881781187842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4736078881781187841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ac2519700976f4688b40a1578a8069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  host: 192.168.1.106
+  port: 50081

@@ -1,0 +1,28 @@
+
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.examples.vesselcontroller";
+option java_outer_classname = "VesselController";
+option objc_class_prefix = "HLW";
+
+package vesselcontroller;
+
+service VesselController {
+    rpc Forward(ControlRequest) returns (ControlResponse) {}
+    rpc Backward(ControlRequest) returns (ControlResponse) {}
+    rpc Portside(ControlRequest) returns (ControlResponse) {}
+    rpc Starboard(ControlRequest) returns (ControlResponse) {}
+    rpc Idle(ControlRequest) returns (ControlResponse) {}
+    rpc RotateClockwise(ControlRequest) returns (ControlResponse) {}
+    rpc RotateCounterClockwise(ControlRequest) returns (ControlResponse) {}
+
+}
+
+message ControlRequest {
+    float throttle = 1;
+}
+
+message ControlResponse {
+    bool success = 1;
+}

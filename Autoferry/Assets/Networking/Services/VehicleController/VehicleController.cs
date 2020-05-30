@@ -10,7 +10,9 @@ namespace Assets.Networking.Services
 
         public string host = "localhost";
 
-        public int port = ServicePortGenerator.GenPort();
+        // Change this to the generated after the thesis work is over
+        //public int port = ServicePortGenerator.GenPort();
+        public int port = 50080;
 
         public WheelDrive wheelDrive;
 
