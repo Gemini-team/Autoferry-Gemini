@@ -51,7 +51,8 @@ use sensordata::SensordataRequest;
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 
-   let mut client = SensordataClient::connect("http://[::1]:50087").await?;
+   //let mut client = SensordataClient::connect("http://[::1]:50070").await?;
+   let mut client = SensordataClient::connect("http://192.168.1.106:50067").await?;
 
     let mut camera = Camera {
         position: glm::vec3(0.0, 0.0, 3.0),
@@ -176,7 +177,8 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
 
         // Load and create a texture
-        let mut texture = graphics::texture::Texture::new("resources/textures/container.jpg");
+        //let mut texture = graphics::texture::Texture::new("resources/textures/container.jpg");
+        let mut texture = graphics::texture::Texture::new("resources/textures/streaming_container.jpg");
 
 
         (ourShader, VBO, VAO, EBO, texture)
@@ -229,7 +231,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                     0, 
                     gl::RGB as i32, 
                     800 as i32, 
-                    640 as i32,
+                    450 as i32,
                     0, 
                     gl::RGB, 
                     gl::UNSIGNED_BYTE, 

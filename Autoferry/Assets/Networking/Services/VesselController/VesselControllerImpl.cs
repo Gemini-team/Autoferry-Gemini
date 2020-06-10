@@ -43,6 +43,7 @@ namespace Assets.Networking.Services
 
         public override async Task<ControlResponse> Backward(ControlRequest request, ServerCallContext context)
         {
+            Debug.Log("Vesselcontroller Backward!");
             ManualResetEvent signalEvent = new ManualResetEvent(false);
             ThreadManager.ExecuteOnMainThread(() =>
             {
@@ -66,6 +67,7 @@ namespace Assets.Networking.Services
 
         public override async Task<ControlResponse> Portside(ControlRequest request, ServerCallContext context)
         {
+            Debug.Log("Vesselcontroller Portside!");
             ManualResetEvent signalEvent = new ManualResetEvent(false);
             ThreadManager.ExecuteOnMainThread(() =>
             {
@@ -88,6 +90,7 @@ namespace Assets.Networking.Services
         }
         public override async Task<ControlResponse> Starboard(ControlRequest request, ServerCallContext context)
         {
+            Debug.Log("Vesselcontroller Starboard!");
             ManualResetEvent signalEvent = new ManualResetEvent(false);
             ThreadManager.ExecuteOnMainThread(() =>
             {
@@ -110,6 +113,7 @@ namespace Assets.Networking.Services
         }
         public override async Task<ControlResponse> RotateClockwise(ControlRequest request, ServerCallContext context)
         {
+            Debug.Log("Vesselcontroller RotateClockwise!");
             ManualResetEvent signalEvent = new ManualResetEvent(false);
             ThreadManager.ExecuteOnMainThread(() =>
             {
@@ -132,6 +136,8 @@ namespace Assets.Networking.Services
         }
         public override async Task<ControlResponse> RotateCounterClockwise(ControlRequest request, ServerCallContext context)
         {
+
+            Debug.Log("Vesselcontroller CounterRotateClockwise!");
             ManualResetEvent signalEvent = new ManualResetEvent(false);
             ThreadManager.ExecuteOnMainThread(() =>
             {
@@ -154,6 +160,7 @@ namespace Assets.Networking.Services
         }
         public override async Task<ControlResponse> Idle(ControlRequest request, ServerCallContext context)
         {
+            Debug.Log("Vesselcontroller Idle!");
             ManualResetEvent signalEvent = new ManualResetEvent(false);
             ThreadManager.ExecuteOnMainThread(() =>
             {
