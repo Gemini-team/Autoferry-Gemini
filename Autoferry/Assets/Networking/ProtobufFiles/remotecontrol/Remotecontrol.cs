@@ -36,10 +36,10 @@ namespace Remotecontrol {
             "AaICA0hMV2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Remotecontrol.GeneralizedForce), global::Remotecontrol.GeneralizedForce.Parser, new[]{ "X", "Y", "Z", "K", "M", "N" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Remotecontrol.ForceRequest), global::Remotecontrol.ForceRequest.Parser, new[]{ "VesselId", "GeneralizedForce" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Remotecontrol.ForceResponse), global::Remotecontrol.ForceResponse.Parser, new[]{ "Success" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Remotecontrol.GeneralizedForce), global::Remotecontrol.GeneralizedForce.Parser, new[]{ "X", "Y", "Z", "K", "M", "N" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Remotecontrol.ForceRequest), global::Remotecontrol.ForceRequest.Parser, new[]{ "VesselId", "GeneralizedForce" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Remotecontrol.ForceResponse), global::Remotecontrol.ForceResponse.Parser, new[]{ "Success" }, null, null, null, null)
           }));
     }
     #endregion
