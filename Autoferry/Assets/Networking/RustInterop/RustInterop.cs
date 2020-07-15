@@ -22,7 +22,7 @@ public static class RustInterop {
     private static extern int multiply_by_two(int num);
 
     [DllImport("unity_rust")]
-    private static extern int add_x_to_each_element(ArrayRef array, uint count);
+    private static extern int write_bytes_to_bmp_file(ArrayRef array, uint count);
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static int GetRandomInt()
@@ -37,9 +37,8 @@ public static class RustInterop {
     }
     
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    public unsafe static int AddXToEachElement(byte[] array, uint length)
+    public unsafe static int WriteBytesToBMPFile(byte[] array, uint length)
     {
-        //return add_x_to_each_element(x, arr_ptr, length);
         ArrayRef arrayRef = new ArrayRef();
 
         IntPtr ptr;
@@ -52,9 +51,7 @@ public static class RustInterop {
         arrayRef.Bytes = ptr;
         arrayRef.Length = length;
 
-        return add_x_to_each_element(arrayRef, arrayRef.Length);
+        return write_bytes_to_bmp_file(arrayRef, arrayRef.Length);
         
-        
-
     }
 }

@@ -1389,6 +1389,7 @@ GameObject:
   - component: {fileID: 340116749}
   - component: {fileID: 340116748}
   - component: {fileID: 340116750}
+  - component: {fileID: 340116747}
   m_Layer: 8
   m_Name: Optical_camera
   m_TagString: MainCamera
@@ -1396,6 +1397,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &340116747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340116746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c6c71fd7fe1adc4190dce5f3d91861e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &340116748
 Camera:
   m_ObjectHideFlags: 0
@@ -6457,7 +6470,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100485821}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c6c71fd7fe1adc4190dce5f3d91861e, type: 3}
   m_Name: 
