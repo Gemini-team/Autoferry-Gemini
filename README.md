@@ -5,7 +5,7 @@
 **This is the HDRP version of the simulator, this is the version that will be maintained, the old repository has been renamed Autoferry Gemini Legacy
 and will not be maintained.**
 
-
+# DETTE ER JAKOB SIN BRANCH!
 
 Autoferry Gemini is a realtime 3D simulation of the **Autoferry** project residing at **NTNU Trondheim**.
 
