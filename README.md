@@ -2,9 +2,7 @@
 <img src="GeminiLogo.png" width="500" height="300">
 
 # Note!
-**This is the HDRP version of the simulator, this is the version that will be maintained, the old repository has been renamed Autoferry Gemini Legacy
-and will not be maintained.**
-
+# THIS REPOSITORY IS NO LONGER MAINTAINED, AND SHOULD NOT BE USED. IT WILL PROBABLY BE REMOVED IN THE NEAR FUTURE. YOU ARE PROBABLY LOOKING FOR THIS: https://github.com/Gemini-team/Gemini
 
 
 Autoferry Gemini is a realtime 3D simulation of the **Autoferry** project residing at **NTNU Trondheim**.
